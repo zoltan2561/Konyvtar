@@ -1,4 +1,11 @@
 name: Java CI
+        - name: Publish to Artifactory
+        run: |
+          jfrog rt c --url=$ARTIFACTORY_URL --access-token=$ARTIFACTORY_ACCESS_TOKEN
+          jfrog rt u "target/*.jar" my-repo
+        env:
+          ARTIFACTORY_URL: ${{ secrets.ARTIFACTORY_URL }}
+          ARTIFACTORY_ACCESS_TOKEN: ${{ secrets.ARTIFACTORY_ACCESS_TOKEN }}
 
 on: [push]
 
