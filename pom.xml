@@ -11,8 +11,8 @@
 	<distributionManagement>
 		<repository>
 			<id>central</id>
-			<name>ed017d67ce44-releases</name>
-			<url>http://localhost:8081/artifactory/libs-release-local/maven-remote/</url>
+			<name>maven-remote/</name>
+			<url>https://repo1.maven.org/maven2/</url>
 		</repository>
 	</distributionManagement>
 	<groupId>com.example</groupId>
