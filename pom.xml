@@ -12,7 +12,7 @@
 		<repository>
 			<id>central</id>
 			<name>ed017d67ce44-releases</name>
-			<url>http://localhost:8081/artifactory/libs-release-local/libs-release</url>
+			<url>http://localhost:8081/artifactory/libs-release-local/maven-remote/</url>
 		</repository>
 	</distributionManagement>
 	<groupId>com.example</groupId>
