@@ -12,7 +12,7 @@
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>ed017d67ce44-snapshots</name>
-			<url>http://localhost:8081/artifactory/libs-release-local/libs-snapshot-local</url>
+			<url>http://localhost:8081/artifactory/libs-release-local/libs-snapshot</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<groupId>com.example</groupId>
