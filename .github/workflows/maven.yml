@@ -27,4 +27,4 @@ jobs:
         run: mvn deploy --file pom.xml
         env:
           ARTIFACTORY_USERNAME: ${{  secrets.admin }}
-          ARTIFACTORY_PASSWORD: ${{ admin }}
+          ARTIFACTORY_PASSWORD: ${{ secrets.admin }}
