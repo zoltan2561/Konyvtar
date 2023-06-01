@@ -26,5 +26,5 @@ jobs:
       - name: Publish to Artifactory
         run: mvn deploy --file pom.xml
         env:
-          ARTIFACTORY_USERNAME: ${{ secrets.SERCER_NAME }}
+          ARTIFACTORY_USERNAME: ${{ SERCER_NAME }}
           ARTIFACTORY_PASSWORD: ${{ 12345 }}
