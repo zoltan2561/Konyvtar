@@ -11,14 +11,9 @@
 	<distributionManagement>
 		<repository>
 			<id>central</id>
-			<name>libs-release-local</name>
-			<url>http://localhost:8081/artifactory/libs-release-local</url>
+			<name>ed017d67ce44-releases</name>
+			<url>http://localhost:8081/artifactory/libs-release-local/libs-release</url>
 		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>libs-snapshot-local</name>
-			<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
-		</snapshotRepository>
 	</distributionManagement>
 	<groupId>com.example</groupId>
 	<artifactId>notes</artifactId>
