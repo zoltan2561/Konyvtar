@@ -21,10 +21,11 @@ jobs:
           cache: maven
 
       - name: Build and Deploy Maven Package
-        run: |
+        run:
+
           # GitHub hozzáférési token beállítása
-          GITHUB_TOKEN="${{ secrets.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 }}"
-          
+          GITHUB_TOKEN="${{ secrets.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 }}" -Dtoken=$GITHUB_TOKEN
+
           # Maven csomag build és feltöltése
           mvn clean package deploy -Dmaven.test.skip=true
 
