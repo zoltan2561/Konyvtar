@@ -1,31 +1,32 @@
-name: Upload Maven Package
+name: Maven CI/CD
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  upload:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
-          java-version: '17'
           distribution: 'temurin'
-          cache: maven
+          java-version: '17'
 
-      - name: Build and Deploy Maven Package
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+
+      - name: Test with Maven
+        run: mvn test --file pom.xml
+
+      - name: Publish to GitHub Package Registry
+        run: mvn deploy --file pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.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 }}
-        run: |
-          # Maven csomag build és feltöltése
-          mvn clean package deploy -Dmaven.test.skip=true -Dtoken=$GITHUB_TOKEN
-
-          # Maven csomag feltöltése a GitHub Package Registry-be
-          mvn deploy -Dregistry=https://maven.pkg.github.com/zoltan2561/Konyvtar -Dtoken=$GITHUB_TOKEN
