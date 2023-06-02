@@ -11,10 +11,11 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>zoltan2561</name>
+			<name>GitHub Package Registry</name>
 			<url>https://maven.pkg.github.com/zoltan2561/Konyvtar</url>
 		</repository>
 	</distributionManagement>
+
 
 
 	<groupId>com.example</groupId>

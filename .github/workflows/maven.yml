@@ -29,4 +29,4 @@ jobs:
       - name: Publish to GitHub Package Registry
         run: mvn deploy --file pom.xml
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
