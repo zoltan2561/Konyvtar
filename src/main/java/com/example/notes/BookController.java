@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller
+@Controller //anot,springes,utvonalak,
 public class BookController {
     private final BookRepository repository;
 
     public BookController(BookRepository repository) {
         this.repository = repository;
     }
-
+//metods htttp kéréssel
     @GetMapping("/books")
     public String getBooks(Model model) {
         model.addAttribute("books", repository.findAll());
