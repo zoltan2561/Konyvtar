@@ -34,4 +34,4 @@ jobs:
           mvn -B deploy --file pom.xml
           cp "target/music-catalog-${version}.jar" "target/music-catalog.jar"
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
