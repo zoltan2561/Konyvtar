@@ -35,5 +35,5 @@ jobs:
 
 
         env:
-          GITHUB_TOKEN: ${{ secrets.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}}
+          GITHUB_TOKEN: ${{ secrets.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 }}
 
