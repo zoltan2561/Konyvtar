@@ -11,15 +11,15 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>zoltan2561</name>
+			<name>GitHub zoltan2561 Apache Maven Packages</name>
 			<url>https://maven.pkg.github.com/zoltan2561/Konyvtar</url>
 		</repository>
 	</distributionManagement>
 
 
 
-	<groupId>com.example</groupId>
-	<artifactId>notes</artifactId>
+	<groupId>Konyvtar</groupId>
+	<artifactId>Konyvtar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>books</name>
 	<description>Demo project for Spring Boot</description>
