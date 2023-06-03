@@ -4,9 +4,6 @@ on:
   push:
     branches: [ master ]
 
-env:
-  DOCKER_REGISTRY: ghcr.io
-  DOCKER_IMAGE_NAME: ${{ github.Konyvtar }}
 
 jobs:
   build:
@@ -38,5 +35,5 @@ jobs:
 
 
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.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}}
 
