@@ -34,7 +34,9 @@ jobs:
           # Overwrite local artifact version
           mvn -B versions:set -DnewVersion="$version" --file pom.xml
           mvn -B deploy --file pom.xml
-          cp "target/music-catalog-${version}.jar" "target/music-catalog.jar"
+        
+
+          cp "target/Konyvtar-${version}.jar" "target/music-catalog.jar"
         env:
           GITHUB_TOKEN: ${{ secrets.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 }}
 
