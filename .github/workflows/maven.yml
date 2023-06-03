@@ -38,5 +38,5 @@ jobs:
 
           cp "target/Konyvtar-${version}.jar" "target/music-catalog.jar"
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
 
