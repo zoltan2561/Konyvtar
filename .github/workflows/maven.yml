@@ -30,10 +30,11 @@ jobs:
           echo "ARTIFACT_VERSION=$version" >> $GITHUB_ENV
           # Overwrite local artifact version
           mvn -B versions:set -DnewVersion="$version" --file pom.xml
-          mvn -B deploy --file pom.xml
+          mvn  deploy 
+            cp "target/Konyvtar-${version}.jar" "target/Konyvtar.jar"
         
 
 
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
 
