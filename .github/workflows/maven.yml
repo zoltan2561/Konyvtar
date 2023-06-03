@@ -36,16 +36,16 @@ jobs:
           mvn -B deploy --file pom.xml
           cp "target/music-catalog-${version}.jar" "target/music-catalog.jar"
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
       - name: Log in to the Container registry
         uses: docker/login-action@v2
         with:
           registry: ${{ env.DOCKER_REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.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 }}
+          password: ${{ secrets.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 }}
       - name: Build and push Docker image
         run: |
           docker build . -t ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}:${{ env.ARTIFACT_VERSION }}
           docker push ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}:${{ env.ARTIFACT_VERSION }}
           
-          GITHUB_TOKEN: ${{ secrets.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 }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
