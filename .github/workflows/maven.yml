@@ -36,7 +36,7 @@ jobs:
           mvn -B deploy --file pom.xml
         
 
-          cp "target/Konyvtar-${version}.jar" "target/music-catalog.jar"
+
         env:
           GITHUB_TOKEN: ${{ secrets.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 }}
 
