@@ -4,9 +4,7 @@ on:
   push:
     branches: [ master ]
 
-env:
-  DOCKER_REGISTRY: ghcr.io
-  DOCKER_IMAGE_NAME: ${{ github.repository }}
+
 
 jobs:
   build:
@@ -36,14 +34,4 @@ jobs:
           mvn -B deploy --file pom.xml
           cp "target/music-catalog-${version}.jar" "target/music-catalog.jar"
         env:
-          GITHUB_TOKEN: ${{ secrets.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 }}
-      - name: Log in to the Container registry
-        uses: docker/login-action@v2
-        with:
-          registry: ${{ env.DOCKER_REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push Docker image
-        run: |
-          docker build . -t ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}:${{ env.ARTIFACT_VERSION }}
-          docker push ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}:${{ env.ARTIFACT_VERSION }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
