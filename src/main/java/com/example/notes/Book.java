@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import org.springframework.data.repository.CrudRepository;
 
 
-// Könyv entitás
+// Könyv entitás 1
 @Entity
 public class Book {
     @Id
